@@ -3,7 +3,7 @@
 Description
 ===========
 
-Installs and configures the conntrack host-based intrusion detection system.
+Installs and configures [conntrack](http://conntrack-tools.netfilter.org/) to track the maximum number of concurrent network connections to maintain.
 
 Requirements
 ============
@@ -11,7 +11,7 @@ Requirements
 Platform
 --------
 
-Tested on Ubuntu
+* Ubuntu 14.04
 
 Attributes
 ==========
