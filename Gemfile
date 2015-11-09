@@ -5,17 +5,16 @@
 source 'https://rubygems.org'
 
 group :style do
-  gem 'foodcritic', '~> 3.0'
-  gem 'rubocop', '~> 0.24'
+  gem 'foodcritic'
+  gem 'rubocop'
 end
 
 group :unit do
-  gem 'berkshelf', '~> 3'
-  gem 'chefspec', '~> 4'
-  gem 'chef-sugar'
+  gem 'berkshelf'
+  gem 'chefspec'
 end
 
 group :integration do
-  gem 'test-kitchen', '~> 1.4.0'
-  gem 'kitchen-vagrant', '~> 0.18.0'
+  gem 'test-kitchen'
+  gem 'kitchen-vagrant'
 end
