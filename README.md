@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/mmi-cookbooks/chef-conntrack.svg)](https://travis-ci.org/mmi-cookbooks/chef-conntrack)
+[![Build Status](https://travis-ci.org/mmi-cookbooks/cookbook-conntrack.svg)](https://travis-ci.org/mmi-cookbooks/cookbook-conntrack)
 
 Description
 ===========
