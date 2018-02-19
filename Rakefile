@@ -1,4 +1,4 @@
-# encoding: UTF-8
+
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
 # Based on magic_shell cookbook code, thanks @sethvargo.
@@ -32,7 +32,6 @@ namespace :integration do
       instance.test(:always)
     end
   end
-
   desc 'Test Kitchen with cloud plugins'
   task :cloud do
     if ENV['CI'] == 'true'
@@ -57,12 +56,12 @@ namespace :integration do
 end
 
 desc 'All style checks'
-task style: %w(style:chef style:ruby)
+task style: %w[style:chef style:ruby]
 
 desc 'All tests'
-task test: %w(style spec integration:vagrant)
+task test: %w[style spec integration:vagrant]
 
 desc 'CI tests'
-task ci: %w(style spec integration:cloud)
+task ci: %w[style spec integration:cloud]
 
-task default: %w(test)
+task default: %w[test]

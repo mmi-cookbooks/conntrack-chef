@@ -19,9 +19,7 @@
 
 package 'conntrack'
 
-if node['conntrack'].key?('hashsize') && node['conntrack'].key?('max')
-  Chef::Log.warn('Ignoring value for `hashsize` because `max` exists. Setting `hashsize` to 4*`max`.')
-end
+Chef::Log.warn('Ignoring value for `hashsize` because `max` exists. Setting `hashsize` to 4*`max`.') if node['conntrack'].key?('hashsize') && node['conntrack'].key?('max')
 
 if node['conntrack'].key?('max')
   hashsize = (node['conntrack']['max'] / 4).ceil
@@ -32,7 +30,7 @@ else
 end
 
 template '/etc/modprobe.d/nf_conntrack.conf' do
-  mode 00644
+  mode 0o0644
   owner 'root'
   group 'root'
   variables(hashsize: hashsize)

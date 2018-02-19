@@ -1,4 +1,4 @@
-# encoding: UTF-8
+
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
 
@@ -12,10 +12,10 @@ require 'chef/application'
   platform: 'ubuntu',
   version: '14.04',
   log_level: ::LOG_LEVEL
-}
+}.freeze
 ::CHEFSPEC_OPTS = {
   log_level: ::LOG_LEVEL
-}
+}.freeze
 
 def stub_resources
   stub_command('ls /proc/sys/net/nf_conntrack_max >/dev/null &&! grep 131072 /proc/sys/net/nf_conntrack_max >/dev/null').and_return(true)
